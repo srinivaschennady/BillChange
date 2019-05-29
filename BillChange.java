@@ -144,10 +144,17 @@ public class BillChange {
         amount = amount - quarters_change*QUARTER;
 
         if (amount == 0) {
+            System.out.println("Change Returned ******");
             System.out.println("Quarters#: "+quarters_change);
             System.out.println("Dimes#: "+dimes_change);
             System.out.println("Nickels#: "+nickels_change);
             System.out.println("Pennies#: "+pennies_change);
+            System.out.println("---------------");
+        } else {
+            quarters_available = quarters_available + quarters_change;
+            dimes_available = dimes_available + dimes_change;
+            nickels_available = nickels_available + nickels_change;
+            pennies_available = pennies_available + pennies_change;
         }
 
         return amount;
